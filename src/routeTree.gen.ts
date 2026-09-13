@@ -10,33 +10,232 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CaseRouteImport } from './routes/case'
+import { Route as CasesRouteImport } from './routes/cases'
+import { Route as ClaimsRouteImport } from './routes/claims'
+import { Route as DocumentsRouteImport } from './routes/documents'
+import { Route as DraftingRouteImport } from './routes/drafting'
+import { Route as EvaluationRouteImport } from './routes/evaluation'
+import { Route as ForgotPasswordRouteImport } from './routes/forgot-password'
+import { Route as LinterRouteImport } from './routes/linter'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as PrecedentsRouteImport } from './routes/precedents'
+import { Route as ResearchRouteImport } from './routes/research'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as SignupRouteImport } from './routes/signup'
+import { Route as StrategyRouteImport } from './routes/strategy'
+import { Route as StressTestRouteImport } from './routes/stress-test'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CaseRoute = CaseRouteImport.update({
+  id: '/case',
+  path: '/case',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CasesRoute = CasesRouteImport.update({
+  id: '/cases',
+  path: '/cases',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClaimsRoute = ClaimsRouteImport.update({
+  id: '/claims',
+  path: '/claims',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocumentsRoute = DocumentsRouteImport.update({
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DraftingRoute = DraftingRouteImport.update({
+  id: '/drafting',
+  path: '/drafting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EvaluationRoute = EvaluationRouteImport.update({
+  id: '/evaluation',
+  path: '/evaluation',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForgotPasswordRoute = ForgotPasswordRouteImport.update({
+  id: '/forgot-password',
+  path: '/forgot-password',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LinterRoute = LinterRouteImport.update({
+  id: '/linter',
+  path: '/linter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrecedentsRoute = PrecedentsRouteImport.update({
+  id: '/precedents',
+  path: '/precedents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ResearchRoute = ResearchRouteImport.update({
+  id: '/research',
+  path: '/research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SignupRoute = SignupRouteImport.update({
+  id: '/signup',
+  path: '/signup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StrategyRoute = StrategyRouteImport.update({
+  id: '/strategy',
+  path: '/strategy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StressTestRoute = StressTestRouteImport.update({
+  id: '/stress-test',
+  path: '/stress-test',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/case': typeof CaseRoute
+  '/cases': typeof CasesRoute
+  '/claims': typeof ClaimsRoute
+  '/documents': typeof DocumentsRoute
+  '/drafting': typeof DraftingRoute
+  '/evaluation': typeof EvaluationRoute
+  '/forgot-password': typeof ForgotPasswordRoute
+  '/linter': typeof LinterRoute
+  '/login': typeof LoginRoute
+  '/precedents': typeof PrecedentsRoute
+  '/research': typeof ResearchRoute
+  '/settings': typeof SettingsRoute
+  '/signup': typeof SignupRoute
+  '/strategy': typeof StrategyRoute
+  '/stress-test': typeof StressTestRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/case': typeof CaseRoute
+  '/cases': typeof CasesRoute
+  '/claims': typeof ClaimsRoute
+  '/documents': typeof DocumentsRoute
+  '/drafting': typeof DraftingRoute
+  '/evaluation': typeof EvaluationRoute
+  '/forgot-password': typeof ForgotPasswordRoute
+  '/linter': typeof LinterRoute
+  '/login': typeof LoginRoute
+  '/precedents': typeof PrecedentsRoute
+  '/research': typeof ResearchRoute
+  '/settings': typeof SettingsRoute
+  '/signup': typeof SignupRoute
+  '/strategy': typeof StrategyRoute
+  '/stress-test': typeof StressTestRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/case': typeof CaseRoute
+  '/cases': typeof CasesRoute
+  '/claims': typeof ClaimsRoute
+  '/documents': typeof DocumentsRoute
+  '/drafting': typeof DraftingRoute
+  '/evaluation': typeof EvaluationRoute
+  '/forgot-password': typeof ForgotPasswordRoute
+  '/linter': typeof LinterRoute
+  '/login': typeof LoginRoute
+  '/precedents': typeof PrecedentsRoute
+  '/research': typeof ResearchRoute
+  '/settings': typeof SettingsRoute
+  '/signup': typeof SignupRoute
+  '/strategy': typeof StrategyRoute
+  '/stress-test': typeof StressTestRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/case'
+    | '/cases'
+    | '/claims'
+    | '/documents'
+    | '/drafting'
+    | '/evaluation'
+    | '/forgot-password'
+    | '/linter'
+    | '/login'
+    | '/precedents'
+    | '/research'
+    | '/settings'
+    | '/signup'
+    | '/strategy'
+    | '/stress-test'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/case'
+    | '/cases'
+    | '/claims'
+    | '/documents'
+    | '/drafting'
+    | '/evaluation'
+    | '/forgot-password'
+    | '/linter'
+    | '/login'
+    | '/precedents'
+    | '/research'
+    | '/settings'
+    | '/signup'
+    | '/strategy'
+    | '/stress-test'
+  id:
+    | '__root__'
+    | '/'
+    | '/case'
+    | '/cases'
+    | '/claims'
+    | '/documents'
+    | '/drafting'
+    | '/evaluation'
+    | '/forgot-password'
+    | '/linter'
+    | '/login'
+    | '/precedents'
+    | '/research'
+    | '/settings'
+    | '/signup'
+    | '/strategy'
+    | '/stress-test'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CaseRoute: typeof CaseRoute
+  CasesRoute: typeof CasesRoute
+  ClaimsRoute: typeof ClaimsRoute
+  DocumentsRoute: typeof DocumentsRoute
+  DraftingRoute: typeof DraftingRoute
+  EvaluationRoute: typeof EvaluationRoute
+  ForgotPasswordRoute: typeof ForgotPasswordRoute
+  LinterRoute: typeof LinterRoute
+  LoginRoute: typeof LoginRoute
+  PrecedentsRoute: typeof PrecedentsRoute
+  ResearchRoute: typeof ResearchRoute
+  SettingsRoute: typeof SettingsRoute
+  SignupRoute: typeof SignupRoute
+  StrategyRoute: typeof StrategyRoute
+  StressTestRoute: typeof StressTestRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +247,131 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/case': {
+      id: '/case'
+      path: '/case'
+      fullPath: '/case'
+      preLoaderRoute: typeof CaseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cases': {
+      id: '/cases'
+      path: '/cases'
+      fullPath: '/cases'
+      preLoaderRoute: typeof CasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/claims': {
+      id: '/claims'
+      path: '/claims'
+      fullPath: '/claims'
+      preLoaderRoute: typeof ClaimsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/documents': {
+      id: '/documents'
+      path: '/documents'
+      fullPath: '/documents'
+      preLoaderRoute: typeof DocumentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/drafting': {
+      id: '/drafting'
+      path: '/drafting'
+      fullPath: '/drafting'
+      preLoaderRoute: typeof DraftingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/evaluation': {
+      id: '/evaluation'
+      path: '/evaluation'
+      fullPath: '/evaluation'
+      preLoaderRoute: typeof EvaluationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forgot-password': {
+      id: '/forgot-password'
+      path: '/forgot-password'
+      fullPath: '/forgot-password'
+      preLoaderRoute: typeof ForgotPasswordRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/linter': {
+      id: '/linter'
+      path: '/linter'
+      fullPath: '/linter'
+      preLoaderRoute: typeof LinterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/precedents': {
+      id: '/precedents'
+      path: '/precedents'
+      fullPath: '/precedents'
+      preLoaderRoute: typeof PrecedentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/research': {
+      id: '/research'
+      path: '/research'
+      fullPath: '/research'
+      preLoaderRoute: typeof ResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/signup': {
+      id: '/signup'
+      path: '/signup'
+      fullPath: '/signup'
+      preLoaderRoute: typeof SignupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/strategy': {
+      id: '/strategy'
+      path: '/strategy'
+      fullPath: '/strategy'
+      preLoaderRoute: typeof StrategyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/stress-test': {
+      id: '/stress-test'
+      path: '/stress-test'
+      fullPath: '/stress-test'
+      preLoaderRoute: typeof StressTestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CaseRoute: CaseRoute,
+  CasesRoute: CasesRoute,
+  ClaimsRoute: ClaimsRoute,
+  DocumentsRoute: DocumentsRoute,
+  DraftingRoute: DraftingRoute,
+  EvaluationRoute: EvaluationRoute,
+  ForgotPasswordRoute: ForgotPasswordRoute,
+  LinterRoute: LinterRoute,
+  LoginRoute: LoginRoute,
+  PrecedentsRoute: PrecedentsRoute,
+  ResearchRoute: ResearchRoute,
+  SettingsRoute: SettingsRoute,
+  SignupRoute: SignupRoute,
+  StrategyRoute: StrategyRoute,
+  StressTestRoute: StressTestRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
